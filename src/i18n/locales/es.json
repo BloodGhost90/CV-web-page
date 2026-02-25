@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Desarrollador de aplicaciones web y móviles",
+    "subtitle": "Creo soluciones digitales claras y mantenibles"
+  }
+}

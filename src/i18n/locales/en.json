@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Web & Mobile Application Developer",
+    "subtitle": "I build clear and maintainable digital solutions"
+  }
+}
