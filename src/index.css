@@ -1,5 +1,10 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap");
 
-body {
-  /* background-color: #10172a; */
+@theme {
+  --color-dark: #080c14;
+  --color-accent: #58a6ff;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --font-syne: "Syne", sans-serif;
+  --font-dm: "DM Sans", sans-serif;
 }
