@@ -1,12 +1,12 @@
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50">
-      <div className="flex justify-between items-center mx-auto">
-        <span className="text-accent text-lg tracking-tighter font-syne font-bold items-center">
+    <header className="sticky top-0 z-50 bg-dark w-full">
+      <div className="flex justify-between items-center max-w-4xl mx-auto py-4 px-2">
+        <span className="text-accent text-sm md:text-lg tracking-tighter font-syne font-bold whitespace-nowrap">
           Damian Nolberczyk
         </span>
         <nav>
-          <ul className="flex gap-2">
+          <ul className="flex gap-2 list-none">
             <li>
               <a href="#about">About</a>
             </li>
