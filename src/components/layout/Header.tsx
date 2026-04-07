@@ -1,34 +1,27 @@
-import { useTranslation } from "react-i18next";
+import NavLink from "../ui/NavLink";
 
 export default function Header() {
-  const { t } = useTranslation();
-
   return (
-    <header className="w-full sticky top-0 z-20 bg-dark border-b border-white/10 backdrop-blur-md">
-      <div className="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
-        <span className="font-syne font-bold text-accent text-lg tracking-tight">
+    <header className="sticky top-0 z-50 bg-[rgba(8,12,20,0.85)] backdrop-blur-md w-full border-b-[0.5px] border-white/10 ">
+      <div className="flex justify-between items-center mx-auto py-4 px-4 md:px-10">
+        <span className="text-accent text-sm md:text-lg tracking-tighter font-syne font-bold whitespace-nowrap">
           Damian Nolberczyk
         </span>
-
-        <nav className="flex gap-8">
-          <a
-            href="#about"
-            className="text-sm text-white/50 hover:text-accent transition-colors duration-200"
-          >
-            {t("nav.home")}
-          </a>
-          <a
-            href="#projects"
-            className="text-sm text-white/50 hover:text-accent transition-colors duration-200"
-          >
-            {t("nav.projects")}
-          </a>
-          <a
-            href="#contact"
-            className="text-sm text-white/50 hover:text-accent transition-colors duration-200"
-          >
-            {t("nav.contact")}
-          </a>
+        <nav>
+          <ul className="flex gap-2 md:gap-4 list-none">
+            <li>
+              <NavLink href="#about" textToShow="About" />
+            </li>
+            <li>
+              <NavLink href="#skills" textToShow="Skills" />
+            </li>
+            <li>
+              <NavLink href="#projects" textToShow="Projects" />
+            </li>
+            <li>
+              <NavLink href="#contact" textToShow="Contact" />
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
