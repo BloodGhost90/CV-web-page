@@ -48,7 +48,44 @@ export default function Contact() {
         </div>
 
         {/* Right — formulario */}
-        <div className="flex flex-col gap-4">{/* Formulario aquí */}</div>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-1">
+            <label className="text-white/40 text-xs tracking-widest uppercase">
+              Name
+            </label>
+            <input
+              type="text"
+              placeholder="Your name"
+              className="bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white text-sm outline-none focus:border-accent transition-colors"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <label className="text-white/40 text-xs tracking-widest uppercase">
+              Email
+            </label>
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white text-sm outline-none focus:border-accent transition-colors"
+            />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <label className="text-white/40 text-xs tracking-widest uppercase">
+              Message
+            </label>
+            <textarea
+              placeholder="Tell me about your project..."
+              rows={4}
+              className="bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white text-sm outline-none focus:border-accent transition-colors resize-none"
+            />
+          </div>
+
+          <button className="bg-accent text-black font-syne font-bold px-6 py-3 rounded-md hover:bg-accent/80 transition-colors cursor-pointer">
+            Send message
+          </button>
+        </div>
       </div>
     </section>
   );
