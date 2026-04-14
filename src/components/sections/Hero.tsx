@@ -15,12 +15,18 @@ export default function Hero() {
         </p>
         {/* Buttons container */}
         <div className="flex justify-center md:justify-start gap-2">
-          <button className="bg-accent text-black rounded-md font-syne px-5 py-2 hover:bg-accent/80 hover:scale-105 transition-all duration-200 cursor-pointer">
+          <a
+            href="#projects"
+            className="bg-accent text-black rounded-md font-syne px-5 py-2 hover:bg-accent/80 hover:scale-105 active:bg-accent/80 active:scale-105 transition-all duration-200 cursor-pointer"
+          >
             Projects
-          </button>
-          <button className="bg-transparent text-white/60 rounded-md font-syne px-5 py-2 border-2 hover:border-accent hover:text-accent transition-colors duration-200 cursor-pointer">
+          </a>
+          <a
+            href="#contact"
+            className="bg-transparent text-white/60 rounded-md font-syne px-5 py-2 border-2 hover:border-accent hover:text-accent acvtive:border-accent active:text-accent transition-colors duration-200 cursor-pointer"
+          >
             Contact
-          </button>
+          </a>
         </div>
       </div>
       {/* Right Side */}
