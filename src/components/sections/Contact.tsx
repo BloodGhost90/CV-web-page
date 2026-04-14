@@ -1,4 +1,35 @@
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = () => {
+    emailjs
+      .send(
+        "service_eomz4sl",
+        "template_2kqazsh",
+        {
+          name: name,
+          email: email,
+          message: message,
+          subject: "Portfolio contact",
+        },
+        "SJ2KzDUyXZeK2m_S7",
+      )
+      .then(() => {
+        alert("Message sent!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch(() => {
+        alert("Something went wrong. Try again.");
+      });
+  };
+
   return (
     <section
       id="contact"
@@ -19,11 +50,11 @@ export default function Contact() {
             Feel free to reach out for projects, questions or just to connect.
           </p>
           <a
-            href="mailto:tuemail@gmail.com"
+            href="mailto:dnol.code@gmail.com"
             className="flex items-center gap-3 text-white/60 text-sm hover:text-accent hover:border-accent active:text-accent transition-colors duration-200 cursor-pointer bg-white/5 border border-white/10 rounded-xl px-4 py-3"
           >
             <span className="w-2 h-2 rounded-full bg-accent shrink-0"></span>
-            tuemail@gmail.com
+            dnol.code@gmail.com
           </a>
 
           <a
@@ -37,13 +68,13 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://linkedin.com/in/tuperfil"
+            href="https://www.linkedin.com/in/damiannolberczyk/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-white/60 text-sm hover:text-accent hover:border-accent active:text-accent transition-colors duration-200 cursor-pointer bg-white/5 border border-white/10 rounded-xl px-4 py-3"
           >
             <span className="w-2 h-2 rounded-full bg-accent shrink-0"></span>
-            linkedin.com/in/tuperfil
+            linkedin.com/in/damiannolberczyk
           </a>
         </div>
 
@@ -56,6 +87,8 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white text-sm outline-none focus:border-accent transition-colors"
             />
           </div>
@@ -67,6 +100,8 @@ export default function Contact() {
             <input
               type="email"
               placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white text-sm outline-none focus:border-accent transition-colors"
             />
           </div>
@@ -78,11 +113,16 @@ export default function Contact() {
             <textarea
               placeholder="Tell me about your project..."
               rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="bg-white/5 border border-white/10 rounded-md px-4 py-3 text-white text-sm outline-none focus:border-accent transition-colors resize-none"
             />
           </div>
 
-          <button className="bg-accent text-black font-syne font-bold px-6 py-3 rounded-md hover:bg-accent/80 transition-colors cursor-pointer">
+          <button
+            onClick={sendEmail}
+            className="bg-accent text-black font-syne font-bold px-6 py-3 rounded-md hover:bg-accent/80 transition-colors cursor-pointer"
+          >
             Send message
           </button>
         </div>
