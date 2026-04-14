@@ -10,16 +10,16 @@ export default function Header() {
         <nav>
           <ul className="flex gap-2 md:gap-4 list-none">
             <li>
-              <NavLink href="#about" textToShow="About" />
+              <NavLink href="#about" label="About" />
             </li>
             <li>
-              <NavLink href="#skills" textToShow="Skills" />
+              <NavLink href="#skills" label="Skills" />
             </li>
             <li>
-              <NavLink href="#projects" textToShow="Projects" />
+              <NavLink href="#projects" label="Projects" />
             </li>
             <li>
-              <NavLink href="#contact" textToShow="Contact" />
+              <NavLink href="#contact" label="Contact" />
             </li>
           </ul>
         </nav>
