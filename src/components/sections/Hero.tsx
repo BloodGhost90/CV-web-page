@@ -2,7 +2,7 @@ import MeStickerLaptop from "../../assets/MeSticker.png";
 
 export default function Hero() {
   return (
-    <section className="w-full flex flex-col-reverse md:flex-row justify-between items-center mx-auto pt-20 pb-5 px-10 gap-10 md:gap-32 max-w-5xl">
+    <section className="w-full flex flex-col-reverse md:flex-row justify-between items-center mx-auto px-10 py-20 md:gap-32 max-w-5xl">
       {/* Left Side */}
       <div className="flex-1">
         <h1 className="font-syne text-2xl md:text-5xl font-bold">
